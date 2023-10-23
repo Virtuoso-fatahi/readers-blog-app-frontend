@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "./UserContent";
+import { URL } from "./App";
 
 function Header() {
   const {setUserInfo, userInfo} = useContext(UserContext);
   useEffect(() => {
-    fetch("http://localhost:4000/profile", {
+    fetch(`${URL}/profile`, {
       credentials: "include",
     }).then((response) => {
       response.json().then(userInfo => {
@@ -15,7 +16,7 @@ function Header() {
   }, []);
 
   function logout() {
-    fetch('http://localhost:4000/logout', {
+    fetch(`${URL}/logout`, {
       credentials: 'include',
       method: 'POST'
     });

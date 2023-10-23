@@ -8,7 +8,6 @@ import { UserContextProvider } from "./UserContent";
 import CreatePost from "./pages/CreatePost";
 import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
-import DeletePost from "./pages/DeletePost";
 
 export const URL = process.env.REACT_APP_SERVER_URL
 
@@ -23,7 +22,6 @@ function App() {
           <Route path="/create" element={<CreatePost />}></Route>
           <Route path="/post/:id" element={<PostPage />}></Route>
           <Route path="/edit/:id" element={<EditPost />}></Route>
-          <Route path="/delete/:id" element={<DeletePost />}></Route>
         </Route>
       </Routes>
     </UserContextProvider>
