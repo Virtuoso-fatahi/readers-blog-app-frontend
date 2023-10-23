@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Post from "../Post";
+import { URL } from "../App";
 
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:4000/post').then(response => {
+    fetch(`${URL}/post`).then(response => {
       response.json().then(posts => {
         setPosts(posts);
       });

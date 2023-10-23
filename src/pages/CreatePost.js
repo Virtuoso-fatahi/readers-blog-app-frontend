@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navigate } from "react-router-dom";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import { URL } from '../App';
 
 const modules = {
     toolbar: [
@@ -38,7 +39,7 @@ export default function CreatePost() {
         data.set('file', files[0]);
         e.preventDefault();
         // console.log(files);
-        const response = await fetch('http://localhost:4000/post', {
+        const response = await fetch(`${URL}/post`, {
             method: 'POST',
             body: data,
             credentials: 'include',

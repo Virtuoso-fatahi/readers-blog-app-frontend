@@ -10,6 +10,8 @@ import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
 import DeletePost from "./pages/DeletePost";
 
+export const URL = process.env.REACT_APP_SERVER_URL
+
 function App() {
   return (
     <UserContextProvider>

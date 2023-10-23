@@ -4,6 +4,7 @@ import { Navigate, useParams } from "react-router-dom";
 import axios from 'axios'
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { URL } from "../App";
 
 const modules = {
     toolbar: [
@@ -36,7 +37,7 @@ const DeletePost = ({ }) => {
     const [isDeleted, setIsDeleted] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:4000/post/${id}`).then((response) => {
+        fetch(`${URL}/post/${id}`).then((response) => {
           response.json().then((postInfo) => {
             setTitle(postInfo.title);
             setContent(postInfo.content);
@@ -50,7 +51,7 @@ const DeletePost = ({ }) => {
 
         
 
-      const response = await axios.delete(`http://localhost:4000/post/${id}`, {
+      const response = await axios.delete(`${URL}/post/${id}`, {
       method: "DELETE",
     //   body: data,
       credentials: 'include',
