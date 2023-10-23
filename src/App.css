@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 10px;
+  width: 98%;
+  max-width: 1200px;
+  margin: 10px auto 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 10px;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: blue;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Homepage Post Section */
+.post {
+  display: grid;
+  grid-template-columns: 1fr; 
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 900px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .post {
+    grid-template-columns: 0.6fr 1.4fr;
+    gap: 25px;
+  }
+}
+
+.post .post-content h2 {
+ font-size: 1.5rem;
+}
+
+.post .post-img {
+  height: 180px;
+  overflow: hidden;
+}
+
+.post .post-content a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post p.info {
+  margin: 10px 0;
+  color: #888;
+  font-size: .8rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+.post p.info .author {
+  color: #333;
+}
+
+.post p.content {
+  margin: 6px 0;
+  line-height: 1.4rem;
+}
+
+/* Form Section */
+.form-design {
+  width: 100%;
+  max-width: 500px;
+  margin: 70px auto;
+  padding: 3rem 2rem;
+  overflow: auto;
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+
+.form-design.login h1, .form-design.register h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form-design input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.btn.hover {
+  background-color: #444;
+}
+
+.bg-dark {
+  background: #333;
+  color: gray;
+}
+
+.form-design .bottom-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Post Page */
+.post-page {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.post-page h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.post-page .post-image {
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.post-page .post-image img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.post-page .post-author, .post-page time {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: .7rem;
+
+}
+
+.post-page .post-author {
+  font-weight: bold;
+}
+
+.post-page time {
+  display: block;
+  color: #aaa;
+}
+
+.post-page .post-content p {
+  line-height: 1.6rem;
+}
+
+.post-page .edit-post {
+  display: flex;
+  gap: 15px;
+  width: 350px;
+  margin: 0 auto;
+}
+
+.post-page .edit-post svg {
+  width: 20px;
+}
+
+.post-page .edit-post .edit-btn, .post-page .edit-post .delete-btn {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
