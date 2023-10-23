@@ -31,6 +31,7 @@ export default function CreatePost() {
     const [content, setContent] = useState('');
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState(false);
+    
    async function creatNewPost(e) {
         const data = new FormData();
         data.set('title', title);
@@ -44,10 +45,11 @@ export default function CreatePost() {
             body: data,
             credentials: 'include',
         });
+
         if (response.ok) {
             setRedirect(true);
         }
-    }
+    };
 
     if (redirect) {
         return <Navigate to={'/'}/>
