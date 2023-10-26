@@ -8,6 +8,8 @@ import { UserContextProvider } from "./UserContent";
 import CreatePost from "./pages/CreatePost";
 import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPost";
+require('dotenv').config();
+process.env;
 
 export const URL = process.env.REACT_APP_SERVER_URL
 
